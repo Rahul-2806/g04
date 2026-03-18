@@ -2,13 +2,12 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAEK9UOQVw1FVFw3R2iNGruzcSc889lU0I",
-  authDomain: "go4-expeditions.firebaseapp.com",
-  projectId: "go4-expeditions",
-  storageBucket: "go4-expeditions.firebasestorage.app",
-  messagingSenderId: "366511105593",
-  appId: "1:366511105593:web:71cb0ab8dcbfaf4db10fe8",
-  measurementId: "G-BHZTSYVY3V"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
