@@ -82,11 +82,11 @@ export default function Footer({ onBookNow }) {
             <ul className="footer-contact">
               <li>
                 <span>📱</span>
-                <a href="tel:+919876543210">+91 98765 43210</a>
+                <a href="tel:+917890123456">+91 78901 23456</a>
               </li>
               <li>
                 <span>📧</span>
-                <a href="mailto:info@g4expeditions.com">info@g4expeditions.com</a>
+                <a href="mailto:g4expedition@gmail.com">g4expedition@gmail.com</a>
               </li>
               <li>
                 <span>📍</span>
