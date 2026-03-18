@@ -1,0 +1,144 @@
+.destinations-section {
+  background: var(--cream);
+}
+
+.dest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.dest-card {
+  animation: fadeUp 0.6s ease both;
+  border: 1px solid rgba(201,168,76,0.1);
+}
+
+.dest-card__img-wrap {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.dest-card__img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.dest-card:hover .dest-card__img {
+  transform: scale(1.08);
+}
+
+.dest-card__img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px 16px;
+}
+
+.dest-card__name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.dest-card__count {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.78);
+  margin-top: 3px;
+}
+
+.dest-card__actions {
+  position: absolute;
+  top: 12px; right: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.dest-card__icon-btn {
+  width: 30px; height: 30px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dest-card__icon-btn:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.dest-card__body {
+  padding: 18px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dest-card__pop-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--emerald);
+  letter-spacing: 0.5px;
+}
+
+.dest-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dest-card__list li {
+  font-size: 12px;
+  color: var(--charcoal);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dest-card__list li::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.dest-card__more {
+  font-size: 11px;
+  color: var(--emerald-light);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dest-card__btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 12px;
+  margin-top: 4px;
+}
+
+@media (max-width: 1024px) {
+  .dest-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .dest-grid { grid-template-columns: 1fr; }
+}

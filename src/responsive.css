@@ -1,0 +1,112 @@
+/* ─── RESPONSIVE OVERRIDES FOR TABLET & MOBILE ─── */
+/* This file adds extra responsive polish on top of index.css */
+
+/* ── TABLET (max 1024px) ── */
+@media (max-width: 1024px) {
+  .section-title { font-size: clamp(28px, 4.5vw, 48px); }
+
+  /* Navbar */
+  .navbar__links { gap: 20px; }
+  .navbar__link { font-size: 12px; }
+
+  /* Hero */
+  .hero__title { font-size: clamp(42px, 6vw, 70px); }
+  .hero__subtitle { font-size: 15px; }
+  .hero__stat-num { font-size: 24px; }
+}
+
+/* ── MOBILE LANDSCAPE + SMALL TABLET (max 768px) ── */
+@media (max-width: 768px) {
+  /* Section spacing */
+  .section { padding: 56px 0; }
+  .container { padding: 0 18px; }
+
+  /* Hero */
+  .hero { min-height: 100svh; }
+  .hero__content { padding: 0 18px; padding-top: 110px; }
+  .hero__title { font-size: clamp(36px, 8vw, 56px); }
+  .hero__subtitle { font-size: 14px; max-width: 100%; }
+  .hero__actions { gap: 12px; }
+  .hero__btn-primary, .hero__btn-secondary { padding: 13px 26px; font-size: 13px; }
+  .hero__stats { gap: 16px; }
+  .hero__stat-num { font-size: 22px; }
+  .hero__stat-label { font-size: 10px; }
+
+  /* Section headings */
+  .section-title { font-size: clamp(26px, 6vw, 40px); }
+  .section-subtitle { font-size: 14px; }
+
+  /* Packages */
+  .pkg-tabs { margin: 32px 0 28px; }
+
+  /* Services — 2 columns */
+  .srv-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .srv-card { padding: 24px 16px; }
+  .srv-icon { width: 56px; height: 56px; font-size: 24px; }
+  .srv-title { font-size: 15px; }
+
+  /* Transport */
+  .transport-features { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .transport-feat { padding: 24px 16px; }
+
+  /* Testimonials */
+  .testi-section .section-subtitle { display: none; }
+
+  /* Footer CTA */
+  .footer-cta { padding: 36px 0; }
+  .footer-cta__title { font-size: 22px; }
+  .footer-main { padding: 48px 0 32px; }
+}
+
+/* ── MOBILE PORTRAIT (max 480px) ── */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero__title { font-size: 34px; line-height: 1.15; }
+  .hero__subtitle { display: none; }
+  .hero__stats { gap: 12px; flex-wrap: wrap; }
+  .hero__stat { min-width: calc(50% - 12px); }
+
+  /* Packages */
+  .pkg-grid { grid-template-columns: 1fr; gap: 20px; }
+  .pkg-tab { min-width: 68px; padding: 9px 10px; font-size: 12px; }
+
+  /* Services — 2 col still works fine */
+  .srv-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Destinations */
+  .dest-grid { grid-template-columns: 1fr; }
+
+  /* Food */
+  .food-grid { grid-template-columns: 1fr; }
+  .food-banner { height: 160px; }
+  .food-note { padding: 28px 18px; }
+
+  /* Transport */
+  .transport-features { grid-template-columns: 1fr 1fr; }
+  .transport-bottom { grid-template-columns: 1fr; }
+  .transport-seats__grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Testimonials */
+  .testi-carousel { grid-template-columns: 1fr; }
+  .testi-card { opacity: 0.35; }
+  .testi-card--active { opacity: 1; }
+
+  /* Modal */
+  .modal-box { padding: 28px 18px; border-radius: 14px; }
+  .modal-box h2 { font-size: 24px; }
+  .form-row { grid-template-columns: 1fr; }
+  .booking-header { gap: 12px; }
+  .booking-wa-icon { width: 44px; height: 44px; border-radius: 12px; }
+
+  /* Footer */
+  .footer-main__grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-cta__inner { flex-direction: column; text-align: center; }
+  .footer-bottom__inner { flex-direction: column; text-align: center; gap: 4px; }
+}
+
+/* ── VERY SMALL (max 360px) ── */
+@media (max-width: 360px) {
+  .hero__title { font-size: 28px; }
+  .pkg-tab { min-width: 60px; font-size: 11px; padding: 8px 8px; }
+  .btn-gold, .btn-outline { padding: 12px 20px; font-size: 13px; }
+}
